@@ -14,25 +14,60 @@
 
 <body>
 
-  Bill
+  <header class="app-header">
+    <img class="app-logo" src="images/logo.svg" alt="app logo">
+  </header>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+  <main>
 
-  Number of People
+    <section class="tip-calculator">
 
-  Tip Amount
-  / person
+      <form action="" class="tip-calculator__form" id="form" novalidate>
+        <div class="tip-calculator__field">
+          <div class="tip-calculator__input-wrap">
+            <label class="tip-calculator__label" for="bill">Bill</label>
+            <img src="images/icon-dollar.svg" class="tip-calculator__icon" alt="dollar sign">
+            <input type="number" class="tip-calculator__input" min="0" step="0.01" placeholder="0" id="bill">
+          </div>
+        </div>
 
-  Total
-  / person
+        <fieldset class="tip-calculator__tips">
+          <legend class="tip-calculator__label">Select Tip %</legend>
+          <button class="tip-calculator__tip-btn" data-tip="5" type="button">5%</button>
+          <button class="tip-calculator__tip-btn" data-tip="10" type="button">10%</button>
+          <button class="tip-calculator__tip-btn" data-tip="15" type="button">15%</button>
+          <button class="tip-calculator__tip-btn" data-tip="25" type="button">25%</button>
+          <button class="tip-calculator__tip-btn" data-tip="50" type="button">50%</button>
+          <button class="tip-calculator__tip-btn" data-tip="custom" type="button">Custom</button>
+        </fieldset>
 
-  Reset
+        <div class="tip-calculator__field">
+          <div class="tip-calculator__input-wrap">
+            <label class="tip-calculator__label" for="people">Number of People</label>
+            <img src="images/icon-person.svg" class="tip-calculator__icon" alt="people icon">
+            <input type="number" class="tip-calculator__input" min="1" step="1" placeholder="0" id="people">
+          </div>
+        </div>
+      </form>
+
+      <section class="tip-calculator__results">
+        <div class="tip-calculator__results-wrapper">
+          <h2 class="tip-calculator__result-title">Tip Amount</h2>
+          <p>/ person</p>
+          <p class="tip-calculator__result" id="tipAmount">0.00</p>
+        </div>
+        <div class="tip-calculator__results-wrapper">
+          <h2 class="tip-calculator__result-title">Total</h2>
+          <p>/ person</p>
+          <p class="tip-calculator__result" id="totalAmount">0.00</p>
+        </div>
+
+        <button class="reset-btn" type="button">RESET</button>
+      </section>
+
+    </section>
+
+  </main>
 
 </body>
 
