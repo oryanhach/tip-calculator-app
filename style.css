@@ -161,11 +161,16 @@ header {
 
 .tip-calculator__input {
 	background-color: var(--clr-grey-50);
-	border: none;
+	border: 1px solid transparent;
 	border-radius: 8px;
 	padding: 0.7rem;
 	text-align: end;
-	color: var(--clr-black);
+	color: var(--clr-green-900);
+}
+
+.tip-calculator__input:hover {
+	cursor: pointer;
+	border: 1px solid var(--clr-green-400);
 }
 
 .tip-calculator__tips {
@@ -189,6 +194,22 @@ header {
 	padding: 0.6rem 0;
 	border-radius: 8px;
 	font-size: var(--fs-4);
+}
+
+.tip-calculator__tip-btn:last-of-type {
+	background-color: var(--clr-grey-50);
+	color: var(--clr-grey-600);
+}
+
+.tip-calculator__tip-btn:hover {
+	cursor: pointer;
+	background-color: var(--clr-grey-200);
+	color: var(--clr-green-900);
+}
+
+.tip-calculator__tip-btn:focus {
+	background-color: var(--clr-green-400);
+	color: var(--clr-green-900);
 }
 
 .tip-calculator__results {
@@ -227,4 +248,40 @@ header {
 	color: var(--clr-green-900);
 	padding: 0.7rem;
 	font-size: 1.1rem;
+}
+
+@media (min-width: 52rem) {
+	main {
+		max-width: 920px;
+		margin-inline: auto;
+	}
+
+	.tip-calculator {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
+
+		border-radius: 1.4rem;
+	}
+
+	.tip-calculator__tip-btn {
+		width: 27%;
+		padding: 0.6rem 0;
+	}
+
+	.tip-calculator__input {
+		font-size: var(--fs-4);
+	}
+
+	.tip-calculator__results {
+		margin-top: 0;
+	}
+
+	.tip-calculator__result {
+		font-size: var(--fs-1);
+	}
+
+	.reset-btn {
+		margin-top: auto;
+	}
 }
